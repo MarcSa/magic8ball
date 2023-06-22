@@ -6,6 +6,7 @@ void main() => runApp(
         home: Scaffold(
           backgroundColor: Colors.lightBlue.shade500,
           appBar: AppBar(
+            title: Text('Ask me anything!'),
             backgroundColor: Colors.lightBlue.shade900,
           ),
           body: ImageRenderer(),
