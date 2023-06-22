@@ -24,13 +24,20 @@ class _ImageRendererState extends State<ImageRenderer> {
   @override
   int randomIntImage = 5;
   void randomIntImageGenerator() {
-    randomIntImage = Random().nextInt(4) + 1;
+    setState(() {
+      randomIntImage = Random().nextInt(4) + 1;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Image.asset('ball$randomIntImage.png'),
+      child: TextButton(
+        onPressed: () {
+          randomIntImageGenerator();
+        },
+        child: Image.asset('images/ball$randomIntImage.png'),
+      ),
     );
   }
 }
