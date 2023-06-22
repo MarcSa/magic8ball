@@ -32,12 +32,14 @@ class _ImageRendererState extends State<ImageRenderer> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: TextButton(
-        onPressed: () {
-          randomIntImageGenerator();
-        },
-        child: Image.asset('images/ball$randomIntImage.png'),
+    return Container(
+      child: Center(
+        child: TextButton(
+          onPressed: () {
+            randomIntImageGenerator();
+          },
+          child: Image.asset('images/ball$randomIntImage.png'),
+        ),
       ),
     );
   }
